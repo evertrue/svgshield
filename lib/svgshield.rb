@@ -3,10 +3,12 @@ require 'color'
 require "svgshield/version"
 
 class Svgshield
+  attr_reader :shield
+
   def initialize(subject, status, color = '#aaa')
     color = Color::CSS[color] if color[0] == '#'
 
-    Rasem::SVGImage.new(width: 90, height: 20) do
+    @shield = Rasem::SVGImage.new(width: 90, height: 20) do
       linearGradient('a', x2: 0, y2: '100%') do
         stop 0, '#bbb', '.1'
         stop 1, nil, '.1'
@@ -29,5 +31,9 @@ class Svgshield
         text(62.5, 14, fill: '#fff') { raw status }
       end
     end
+  end
+
+  def to_s
+    shield.to_s
   end
 end
