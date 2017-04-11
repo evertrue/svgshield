@@ -1,8 +1,8 @@
 # Svgshield
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/svgshield`. To experiment with that code, run `bin/console` for an interactive prompt.
+A very simple library for generating your own SVG status shields. For example:
 
-TODO: Delete this and the text above, and describe your gem
+![hello world](https://img.shields.io/badge/hello-world-blue.svg "hello world")
 
 ## Installation
 
@@ -16,13 +16,14 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install svgshield
-
 ## Usage
 
-TODO: Write usage instructions here
+To generate an image object:
+
+```ruby
+redimage1 = Svgshield.new('Subject', 'Status', 'red') # color words
+redimage2 = Svgshield.new('Subject', 'Status', '#f00') # hexadecimal colors
+```
 
 ## Development
 
@@ -32,8 +33,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/svgshield.
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/evertrue/svgshield.
 
 ## License
 
