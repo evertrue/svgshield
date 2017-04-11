@@ -21,8 +21,8 @@ And then execute:
 To generate an image object:
 
 ```ruby
-redimage1 = Svgshield.new('Subject', 'Status', 'red') # color words
-redimage2 = Svgshield.new('Subject', 'Status', '#f00') # hexadecimal colors
+redimage1 = Svgshield.new('Subject', 'Status', 'red').to_s # color words
+redimage2 = Svgshield.new('Subject', 'Status', '#f00').to_s # hexadecimal colors
 ```
 
 ## Development
