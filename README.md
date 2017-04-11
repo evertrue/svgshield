@@ -18,7 +18,7 @@ And then execute:
 
 ## Usage
 
-To generate an image object:
+To generate an image XML string:
 
 ```ruby
 redimage1 = Svgshield.new('Subject', 'Status', 'red').to_s # color words
