@@ -1,4 +1,5 @@
 require 'rasem'
+require 'color'
 require "svgshield/version"
 
 class Svgshield
