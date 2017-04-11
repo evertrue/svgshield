@@ -3,6 +3,8 @@ require "svgshield/version"
 
 class Svgshield
   def initialize(subject, status, color = '#aaa')
+    color = Color::CSS[color] if color[0] == '#'
+
     Rasem::SVGImage.new(width: 90, height: 20) do
       linearGradient('a', x2: 0, y2: '100%') do
         stop 0, '#bbb', '.1'
