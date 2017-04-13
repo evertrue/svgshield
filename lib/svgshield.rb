@@ -1,6 +1,6 @@
 require 'rasem'
 require 'color'
-require "svgshield/version"
+require 'svgshield/version'
 
 class Svgshield
   attr_reader :shield
@@ -8,8 +8,8 @@ class Svgshield
   def initialize(subject, status, color = '#aaa')
     color = Color::CSS[color] if color[0] == '#'
 
-    # subject_width = 37 
-    # status_width = 53 
+    # subject_width = 37
+    # status_width = 53
     full_width = 86
     full_height = 20
 
@@ -26,7 +26,7 @@ class Svgshield
       group 'clip-path' => 'url(#a)' do
         path fill: '#555', d: "M0 0h37v#{full_height}H0z"
         path fill: color, d: "M37 0h49v#{full_height}H37z"
-        path fill: 'url(#b)' d: "M0 0h#{full_width}v#{full_height}H0z"
+        path fill: 'url(#b)', d: "M0 0h#{full_width}v#{full_height}H0z"
       end
 
       group(
@@ -52,7 +52,7 @@ class Svgshield
   def string_width(string)
     # Output is (theoretically, anyway) in pixels
 
-    string.chars.inject(0) { |sum, char| sum + char_width(char) }.round 0
+    string.chars.inject(0) { |a, e| a + char_width(e) }.round 0
   end
 
   def char_width(char)
