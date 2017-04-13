@@ -10,7 +10,7 @@ class Svgshield
 
     # subject_width = 37
     # status_width = 53
-    full_width = 86
+    full_width = 126
     full_height = 20
 
     @shield = Rasem::SVGImage.new(width: full_width, height: full_height) do
@@ -25,7 +25,7 @@ class Svgshield
 
       group 'clip-path' => 'url(#a)' do
         path fill: '#555', d: "M0 0h37v#{full_height}H0z"
-        path fill: color, d: "M37 0h49v#{full_height}H37z"
+        path fill: color, d: "M37 0h89v#{full_height}H37z"
         path fill: 'url(#b)', d: "M0 0h#{full_width}v#{full_height}H0z"
       end
 
@@ -37,8 +37,8 @@ class Svgshield
       ) do
         text(18.5, 15, fill: '#010101', 'fill-opacity' => '.3') { raw subject }
         text(18.5, 14, fill: '#fff') { raw subject }
-        text(60.5, 15, fill: '#010101', 'fill-opacity' => '.3') { raw status }
-        text(60.5, 14, fill: '#fff') { raw status }
+        text(80.5, 15, fill: '#010101', 'fill-opacity' => '.3') { raw status }
+        text(80.5, 14, fill: '#fff') { raw status }
       end
     end
   end
